@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e -u
+
+basename=$(basename "$0")
+this=$(readlink -f "$0")
+
+library="${this%/*}/libantignustep.so"
+stat -- "$library" > /dev/null
+export LD_PRELOAD="$library"
+exec "/usr/bin/$basename" "$@"
+
+# vim:ts=4 sw=4 et
