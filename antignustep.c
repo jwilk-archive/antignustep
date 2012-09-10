@@ -59,7 +59,7 @@ int mkdir(const char *path, mode_t mode)
     if (!original_mkdir) {
         original_mkdir = dlsym(RTLD_NEXT, "mkdir");
         if (!original_mkdir) {
-            errno = EINVAL;
+            errno = ENOSYS;
             return -1;
         }
     }
