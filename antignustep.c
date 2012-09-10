@@ -43,13 +43,16 @@ int mkdir(const char *path, mode_t mode)
          * $HOME/GNUstep), but only if the call passes sanity checks.
          */
         if (mode == 0777) {
+            errno = 0;
             struct passwd* pw = getpwuid(getuid());
-            if (pw == NULL || pw->pw_dir)
+            if (pw == NULL)
                 return -1;
-            size_t home_len = strlen(pw->pw_dir);
-            if (strncmp(path, pw->pw_dir, home_len) == 0 && strcmp(path + home_len, "/GNUstep") == 0) {
-                errno = EACCES;
-                return -1;
+            if (pw->pw_dir != NULL) {
+                size_t home_len = strlen(pw->pw_dir);
+                if (strncmp(path, pw->pw_dir, home_len) == 0 && strcmp(path + home_len, "/GNUstep") == 0) {
+                    errno = EACCES;
+                    return -1;
+                }
             }
         }
     }
