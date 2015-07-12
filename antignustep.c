@@ -66,4 +66,4 @@ int mkdir(const char *path, mode_t mode)
     return original_mkdir(path, mode);
 }
 
-/* vim:set ts=4 sw=4 et:*/
+/* vim:set ts=4 sts=4 sw=4 et:*/
