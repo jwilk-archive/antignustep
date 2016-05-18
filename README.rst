@@ -1,7 +1,7 @@
 This is a LD_PRELOAD hack to prevent GNUstep libraries from creating
 ``$HOME/GNUstep/Library`` directory.
 
-It is meant to work-around `Debian bug #646031`_, which affects ``lsar`` and
+It is meant to work around `Debian bug #646031`_, which affects ``lsar`` and
 ``unar`` binaries from theunarchiver_ package.
 
 .. _theunarchiver: https://unarchiver.c3.cx/
