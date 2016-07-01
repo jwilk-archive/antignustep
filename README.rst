@@ -1,4 +1,4 @@
-This is a LD_PRELOAD hack to prevent GNUstep libraries from creating
+This is an LD_PRELOAD hack to prevent GNUstep libraries from creating
 ``$HOME/GNUstep/Library`` directory.
 
 It is meant to work around `Debian bug #646031`_, which affects ``lsar`` and
