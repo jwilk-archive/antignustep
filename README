@@ -6,3 +6,5 @@ It is meant to work around `Debian bug #646031`_, which affects ``lsar`` and
 
 .. _theunarchiver: https://unarchiver.c3.cx/
 .. _Debian bug #646031: https://bugs.debian.org/646031
+
+.. vim:ft=rst
