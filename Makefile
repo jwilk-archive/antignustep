@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -W -Wall -O2 -g
+CFLAGS = -Wall -Wextra -O2 -g
 CPPFLAGS = -D_GNU_SOURCE
 
 .PHONY: all
