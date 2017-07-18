@@ -20,6 +20,8 @@
  * SOFTWARE.
  */
 
+#define _GNU_SOURCE /* needed for RTLD_NEXT */
+
 #include <dlfcn.h>
 #include <errno.h>
 #include <pwd.h>

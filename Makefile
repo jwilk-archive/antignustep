@@ -1,6 +1,5 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -O2 -g
-CPPFLAGS = -D_GNU_SOURCE
 
 .PHONY: all
 all: libantignustep.so
